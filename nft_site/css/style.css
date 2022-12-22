@@ -1,0 +1,192 @@
+body {
+    font-family: 'Ubuntu-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-size: 20px;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+@font-face {
+	font-family: Ubuntu-Regular; 
+	src: url(/nft_site/fonts/Ubuntu-Regular.ttf); 
+    font-size: 20px;
+}
+@font-face {
+	font-family: Ubuntu-Bold; 
+	src: url(/nft_site/fonts/Ubuntu-Bold.ttf); 
+    font-size: 40px;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+.header{
+    user-select: none;
+    background: #FFFFFF;
+    width: 100%;
+    position: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.icon {
+    font-size: 64px;
+    font-weight: 700;
+}
+/* Контейнер для хедера */
+.container {
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    max-width: 1200px;
+    min-width:1050px;
+    margin: 0 auto;
+}
+.intro_inner {
+    color: #FFFFFF;
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
+}
+.intro {
+    width: 100%;
+    position: flex;
+    height: 50vh;
+    background: url("../icons/inf-pic.png") center no-repeat;
+    background-size: cover;
+}
+.intro_title {
+    font-size: 150px;
+    font-weight: 700;
+    color:#FFFFFF;
+}
+.nav_link {
+    padding-top: 10px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0 20px;
+}
+.nav_link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: #008000;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity 0.1s linear;
+    
+}
+
+.loop{
+    width: 25px;
+    height: 24px;
+    background-color: black;
+    margin: 3px 0 3px 0;
+}
+.nav_link:hover {
+    color: #008000;
+
+}
+.nav_link:hover:after {
+    opacity: 1;
+}
+.header_inner{
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button3 {
+    margin: 0 20px;
+    width: 40px;
+    height: 40px;
+}
+.button4 {
+    margin: 0 20px;
+    width: 51px;
+    height: 40px;
+}
+.footer {
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+}
+.author {
+    color:#FFFFFF;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.block {
+    margin: 50px 0 50px 0;
+    padding: 20px 30px 0px 50px;
+    font-size: 48px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+.block_inf {
+    font-size: 16px;
+    padding: 10px 0px 50px 0px;
+    text-transform: capitalize;
+}
+.search {
+}
+* {box-sizing: border-box;}
+form {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}
+input, button {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+input {
+    font-family: 'Ubuntu-Regular';
+    width: 100%;
+    height: 42px;
+    background: black;
+    color: #FFFFFF;
+    padding-left: 25px;
+
+}
+button {
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: url(/nft_site/icons/loop_white.png);
+    background-size: cover;
+    cursor: pointer;
+}
+.login {
+    position: flex;
+    color: #FFFFFF;
+}
+.black_bt{
+    text-transform: uppercase;
+    border-radius: 50;
+    border-color: #FFFFFF;
+    border: 3px solid #fff; 
+}
+/*text-transform: uppercase; - делает капс*/
