@@ -10,21 +10,11 @@
     <title>IDK</title>
 </head>
 <body>
-    <header class = "header">
-        <div class = "container">
-            <div class="header_inner">
-                <div class = "icon"> IDK </div>
-                <nav class = "navi">
-                    <a href = "index.php" class = "nav_link"> main </a>
-                    <a href = "#" class = "nav_link"> explore </a>
-                    <a href = "login.php" class = "nav_link"> account </a>
-                    <img href = "#" class ="button3" src="icons/face.png" >
-                    <img href = "#" class ="button4" src="icons/cart.png" >
-                    </form>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <div>
+        <?php
+        include 'header.php';
+        ?>
+    </div>
     <div class = "intro"> 
         <div class = "container">
             <div class = intro_inner>
@@ -58,15 +48,10 @@
             </div>
         </div>
     </div>
-    <div class = "footer">
-        <div class = "container">
-            <div class = "author">
-                <p> Anna Prosina </p>
-                <p> Egor Shestovets</p>
-                <p> Kirill Zhadik</p>
-            </div>
-            <p style="color: #FFFFFF; margin: 20px 0 20px 0;"> 2022 </p>
-        </div>
+    <div>
+        <?php 
+        include 'footer.php'
+        ?>
     </div>
 </body>
 </html>
