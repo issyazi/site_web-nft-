@@ -1,5 +1,9 @@
 <?php
     session_start();
+
+    if ($_SESSION['user']){
+        header('Location: account.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +24,7 @@
     </div>
     <form action="inc/signin.php" method="post">
         <label>Логин или электронная почта</label>
-        <input type="text" class = "enter" name="login_email" placeholder="Введите логин">
+        <input type="text" class = "enter" name="login" placeholder="Введите логин">
         <label>Пароль</label>
         <input type="password" class = "enter" name="password" placeholder="Введите пароль">
         <button type="submit">Войти</button>

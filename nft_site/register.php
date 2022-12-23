@@ -20,15 +20,15 @@
     </div>
     <form action="/inc/signup.php" method="post" enctype="multipart/form-data">
         <label>Логин*</label>
-        <input type="text" name="login" placeholder="Введите логин">
+        <input type="text" class = "enter" name="login" placeholder="Введите логин">
         <label>Электронная почта*</label>
-        <input type="email" name="email" placeholder="Введите электронную почту">
+        <input type="email" class = "enter" name="email" placeholder="Введите электронную почту">
         <label>Аватар профиля</label>
-        <input type="file" name="avatar">
+        <input type="file" class = "enter" name="avatar">
         <label>Пароль*</label>
-        <input type="password" name="password" placeholder="Введите пароль">
+        <input type="password" class = "enter" name="password" placeholder="Введите пароль">
         <label>Повторите пароль*</label>
-        <input type="password" name="password_repeat" placeholder="Введите пароль еще раз">
+        <input type="password" class = "enter" name="password_repeat" placeholder="Введите пароль еще раз">
         <button type="submit">Зарегистрировать</button>
         <p>
            У вас уже есть аккаунт? - <a href="login.php">Войти</a>

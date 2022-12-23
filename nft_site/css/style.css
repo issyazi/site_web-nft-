@@ -217,6 +217,7 @@ button{
 .avatar {
     width: 200px;
     height: 200px;
+    border-radius: 100px;
 }
 .inf_block {
     display: inline;
@@ -230,6 +231,13 @@ button{
     padding-left: 50px;
     padding-top: 50px;
     font-family: 'Ubuntu-Regular';
+}
+.logout {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-family: 'Ubuntu-Regular';
+    color: #008000;
+    text-decoration: none;
 }
 .purchased {
     color: #fff;

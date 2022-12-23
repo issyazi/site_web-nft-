@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (!$_SESSION['user']){
+        header('Location: account.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
