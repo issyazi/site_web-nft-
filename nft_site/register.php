@@ -18,28 +18,31 @@
         include 'header.php'
         ?>
     </div>
-    <form action="/inc/signup.php" method="post" enctype="multipart/form-data">
-        <label>Логин*</label>
-        <input type="text" class = "enter" name="login" placeholder="Введите логин">
-        <label>Электронная почта*</label>
-        <input type="email" class = "enter" name="email" placeholder="Введите электронную почту">
-        <label>Аватар профиля</label>
-        <input type="file" class = "enter" name="avatar">
-        <label>Пароль*</label>
-        <input type="password" class = "enter" name="password" placeholder="Введите пароль">
-        <label>Повторите пароль*</label>
-        <input type="password" class = "enter" name="password_repeat" placeholder="Введите пароль еще раз">
-        <button type="submit">Зарегистрировать</button>
-        <p>
-           У вас уже есть аккаунт? - <a href="login.php">Войти</a>
-        </p>
-        <?php
-            if ($_SESSION['message']){
-                echo '<p class="message">' . $_SESSION['message'] . ' </p>';
-            }
-            unset($_SESSION['message']);
-        ?>
-    </form>
+    <div class = "container">
+        <h1 class = "title"> Create new account </h1>
+        <form action="/inc/signup.php" method="post" enctype="multipart/form-data">
+            <label style="margin-top: 30px;">Login*</label>
+            <input type="text" class = "enter" name="login" placeholder="Введите логин">
+            <label>E-mail*</label>
+            <input type="email" class = "enter" name="email" placeholder="Введите электронную почту">
+            <label>Avatar</label>
+            <input type="file" class = "enter" name="avatar">
+            <label>Password*</label>
+            <input type="password" class = "enter" name="password" placeholder="Введите пароль">
+            <label>Repeat password*</label>
+            <input type="password" class = "enter" name="password_repeat" placeholder="Введите пароль еще раз">
+            <button type="submit" class = "buttons">Ready</button>
+            <p>
+            Have account yet? - <a href="login.php">Enter</a>
+            </p>
+            <?php
+                if ($_SESSION['message']){
+                    echo '<p class="message">' . $_SESSION['message'] . ' </p>';
+                }
+                unset($_SESSION['message']);
+            ?>
+        </form>
+    </div>
     <div>
         <?php
         include 'footer.php'

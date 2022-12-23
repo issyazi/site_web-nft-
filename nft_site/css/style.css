@@ -37,6 +37,12 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: 64px;
     font-weight: 700;
 }
+label{
+    font-family: 'Ubuntu-Bold', sans-serif;
+}
+input::placeholder {
+    font-family: 'Ubuntu-Regular';
+}
 /* Контейнер для хедера */
 .container {
     font-family: 'Ubuntu-Bold', sans-serif;
@@ -159,7 +165,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 form {
     position: relative;
-    width: 400px;
     margin: 0 auto;
 }
 .login {
@@ -177,7 +182,6 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
 }
 button{
     margin: 10px 0;
@@ -185,11 +189,13 @@ button{
     border: unset;
     cursor: pointer;
     background-color: #000000;
+    color:#fff;
 }
 .message{
     border: 2px solid #ff0004;
     border-radius: 25px;
     padding: 7px;
+    color: #ff0004;
     text-align: center;
     font-weight: bold;
 }
@@ -213,6 +219,34 @@ button{
     display:flex;
     color:#fff;
 }
+.two_column{
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.login_box {
+    width: 600px;
+    margin: 30px 0 30px 0;
+    border: 1px solid #FFFFFF;
+    padding: 50px;
+    padding-bottom: 400px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display:flex;
+    color:#fff;
+}
+.rg_box{
+    min-width: 200px;
+    max-width: 300px;
+    margin: 100px 0px 0 100px;
+    padding-bottom: 0 0 82px 0;
+}
+.p {
+    color:#fff;
+    display: flex;
+    font-size: 40px;
+    padding-bottom:112px;
+}
 .title {
     padding-top: 50px;
     font-size: 64px;
@@ -229,10 +263,17 @@ button{
 }
 .logout {
     padding-left: 50px;
-    padding-top: 50px;
-    font-family: 'Ubuntu-Regular';
-    color: #008000;
+    padding-top: 20px;
+    display: flex;
     text-decoration: none;
+    transition: color 0.1s linear;
+    color: white;
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 20px;
+    width: 100%;
+}
+.logout:hover{
+    color:#008000;
 }
 .username {
     padding-left: 50px;
@@ -241,7 +282,7 @@ button{
 }
 .email {
     padding-left: 50px;
-    padding-top: 50px;
+    padding-top: 40px;
     font-family: 'Ubuntu-Regular';
 }
 .purchased {
@@ -285,5 +326,58 @@ button{
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
+}
+.cart_inf{
+    margin: 30px 0 0 0;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: black;
+    padding: 5px 80px 5px 80px;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+}
+.item{
+    border: 1px solid #FFFFFF;
+    padding: 25px 30px 25px 30px;
+    display:flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    color:#fff;
+}
+.nft_pic{
+    width: 150px;
+    height: 150px;
+}
+.circle{
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border:2px solid #FFFFFF;
+    border-radius: 100px;
+    margin: 60px 0 0 0;
+}
+.select{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+.sum_items{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+.delete {
+    margin: 60px 60px 0 0;
+}
+.str_name{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
 }
 /*text-transform: uppercase; - делает капс*/

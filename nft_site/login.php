@@ -22,22 +22,33 @@
         include 'header.php'
         ?>
     </div>
-    <form action="inc/signin.php" method="post">
-        <label>Логин или электронная почта</label>
-        <input type="text" class = "enter" name="login" placeholder="Введите логин">
-        <label>Пароль</label>
-        <input type="password" class = "enter" name="password" placeholder="Введите пароль">
-        <button type="submit" class = "buttons">Enter</button>
-        <p>
-           Don't have an account? <a href="/register.php" class = "buttons"> Login</a>
-        </p>
-        <?php
-            if ($_SESSION['message']){
-                echo '<p class="message">' . $_SESSION['message'] . ' </p>';
-            }
-            unset($_SESSION['message']);
-        ?>
-    </form>
+    <div class = "container">
+        <h1 class = "title"> Log in </h1>
+        <div class ="two_column">
+            <div class = "login_box">
+                <form action="inc/signin.php" method="post">
+                    <label>login/e-mail</label>
+                    <input type="text" class = "enter" name="login" placeholder="enter login">
+                    <label>password</label>
+                    <input type="password" class = "enter" name="password" placeholder="enter password">
+                    <div style="padding: 50px;">
+                        <button type="submit" class = "buttons">Enter</button>
+                    </div>
+                    <?php
+                        if ($_SESSION['message']){
+                            echo '<p class="message">' . $_SESSION['message'] . ' </p>';
+                        }
+                        unset($_SESSION['message']);
+                    ?>
+                </form>
+            </div>
+            <div class = "rg_box">
+                <p class = "p">Don't have an account?</p>
+                <a href="/register.php" class = "buttons"> Create</a>
+            </div>
+        </div>
+    </div>
+    
     <div>
         <?php
         include 'footer.php'
