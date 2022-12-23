@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: 20px;
     width: 100%;
     max-width: 1200px;
-    min-width:1050px;
+    min-width:700px;
     margin: 0 auto;
 }
 .intro_inner {
@@ -89,7 +89,6 @@ h1, h2, h3, h4, h5, h6, p{
     top: 100%;
     left: 0;
     z-index: 1;
-
     transition: opacity 0.1s linear;
     
 }
@@ -132,8 +131,13 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .footer {
     margin-top: 50px;
+    font-family: 'Ubuntu-Bold', sans-serif;
     display: flex;
     text-align: center;
+    color: white;;
+    display: flex;
+    flex-direction: column;
+
 }
 .author {
     color:#FFFFFF;
@@ -172,14 +176,15 @@ form{
     color: white;;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 400px;
 }
 button{
     margin: 10px 0;
     padding: 10px;
-    background: #e3e3e3;
     border: unset;
     cursor: pointer;
+    background-color: #000000;
 }
 .message{
     border: 2px solid #ff0004;
@@ -215,12 +220,19 @@ button{
     color:#FFFFFF;
 }
 .avatar {
+    border-radius: 100px;
     width: 200px;
     height: 200px;
-    border-radius: 100px;
 }
 .inf_block {
     display: inline;
+}
+.logout {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-family: 'Ubuntu-Regular';
+    color: #008000;
+    text-decoration: none;
 }
 .username {
     padding-left: 50px;
@@ -231,13 +243,6 @@ button{
     padding-left: 50px;
     padding-top: 50px;
     font-family: 'Ubuntu-Regular';
-}
-.logout {
-    padding-left: 50px;
-    padding-top: 50px;
-    font-family: 'Ubuntu-Regular';
-    color: #008000;
-    text-decoration: none;
 }
 .purchased {
     color: #fff;
@@ -254,5 +259,31 @@ button{
     display: flex;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+.buttons {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;                       
+}
+.buttons:hover {
+    color: #008000;
+    border: 3px solid #008000;
+}
+.bt_admin {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 /*text-transform: uppercase; - делает капс*/

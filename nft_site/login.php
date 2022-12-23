@@ -27,9 +27,9 @@
         <input type="text" class = "enter" name="login" placeholder="Введите логин">
         <label>Пароль</label>
         <input type="password" class = "enter" name="password" placeholder="Введите пароль">
-        <button type="submit">Войти</button>
+        <button type="submit" class = "buttons">Enter</button>
         <p>
-           У вас нет аккаунта? - <a href="/register.php">Зарегистрируйтесь</a>
+           Don't have an account? <a href="/register.php" class = "buttons"> Login</a>
         </p>
         <?php
             if ($_SESSION['message']){

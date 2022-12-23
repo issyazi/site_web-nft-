@@ -1,5 +1,5 @@
 <div class = "footer">
-    <div class = "container">
+    <div>
         <div class = "author">
             <p> Anna Prosina </p>
             <p> Egor Shestovets</p>
