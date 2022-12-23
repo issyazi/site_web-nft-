@@ -6,9 +6,8 @@
                 <a href = "index.php" class = "nav_link"> main </a>
                 <a href = "#" class = "nav_link"> explore </a>
                 <a href = "login.php" class = "nav_link"> account </a>
-                <img href = "#" class ="button3" src="icons/face.png" >
-                <img href = "#" class ="button4" src="icons/cart.png" >
-                </form>
+                <a href = "account.php" class = "nav_link1"> <input type= "image" class ="button3" src="icons/face.png"> </a>
+                <a href = "cart.php" class = "nav_link1"> <input type= "image" href = "#" class ="button4" src="icons/cart.png"> </a>
             </nav>
         </div>
     </div>

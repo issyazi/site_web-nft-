@@ -10,7 +10,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="icons/icon.ico">
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
-    <title>IDK</title>
+    <title> registration</title>
 </head>
 <body>
     <div>

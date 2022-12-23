@@ -10,7 +10,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="icons/icon.ico">
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
-    <title>IDK</title>
+    <title> login </title>
 </head>
 <body>
     <div>
@@ -20,9 +20,9 @@
     </div>
     <form action="inc/signin.php" method="post">
         <label>Логин или электронная почта</label>
-        <input type="text" name="login_email" placeholder="Введите логин">
+        <input type="text" class = "enter" name="login_email" placeholder="Введите логин">
         <label>Пароль</label>
-        <input type="password" name="password" placeholder="Введите пароль">
+        <input type="password" class = "enter" name="password" placeholder="Введите пароль">
         <button type="submit">Войти</button>
         <p>
            У вас нет аккаунта? - <a href="/register.php">Зарегистрируйтесь</a>
