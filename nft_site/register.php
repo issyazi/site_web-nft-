@@ -20,7 +20,7 @@
     </div>
     <div class = "container">
         <h1 class = "title"> Create new account </h1>
-        <form action="/inc/signup.php" method="post" enctype="multipart/form-data">
+        <form>
             <label style="margin-top: 30px;">Login*</label>
             <input type="text" class = "enter" name="login" placeholder="Введите логин">
             <label>E-mail*</label>
@@ -31,17 +31,14 @@
             <input type="password" class = "enter" name="password" placeholder="Введите пароль">
             <label>Repeat password*</label>
             <input type="password" class = "enter" name="password_repeat" placeholder="Введите пароль еще раз">
-            <button type="submit" class = "buttons">Ready</button>
+            <button type="submit" class = "register-btn">Ready</button>
             <p>
             Have account yet? - <a href="login.php">Enter</a>
             </p>
-            <?php
-                if ($_SESSION['message']){
-                    echo '<p class="message">' . $_SESSION['message'] . ' </p>';
-                }
-                unset($_SESSION['message']);
-            ?>
+            <p class="message none"> test</p>
         </form>
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <script src="js/main.js"></script>
     </div>
     <div>
         <?php
