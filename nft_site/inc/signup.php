@@ -78,6 +78,8 @@
             ];
             echo json_encode($response);
 
+            die;
+
         }
         $password = md5($password);
 

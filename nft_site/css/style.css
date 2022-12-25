@@ -214,7 +214,7 @@ button{
 }
 .information {
     margin: 30px 0 30px 0;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     padding: 50px;
     display:flex;
     color:#fff;
@@ -258,6 +258,12 @@ button{
     width: 200px;
     height: 200px;
 }
+.nft_pic {
+    border: 0.25rem solid #000000;
+    border-radius: 20px;
+    width: 180px;
+    height: 180px;
+}
 .inf_block {
     display: inline;
 }
@@ -272,7 +278,21 @@ button{
     font-size: 20px;
     width: 100%;
 }
+.product_buy {
+    padding-left: 50px;
+    padding-top: 20px;
+    display: flex;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    color: rgb(0, 0, 0);
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 20px;
+    width: 100%;
+}
 .logout:hover{
+    color:#008000;
+}
+.product_buy:hover{
     color:#008000;
 }
 .username {
@@ -284,6 +304,18 @@ button{
     padding-left: 50px;
     padding-top: 40px;
     font-family: 'Ubuntu-Regular';
+}
+.product_name{
+    padding-left: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: black;
+}
+.product_price {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-size: 30px;
+    color: rgb(2, 125, 6);
 }
 .purchased {
     color: #fff;
@@ -339,17 +371,15 @@ button{
     justify-content: space-between;
 }
 .item{
-    border: 1px solid #FFFFFF;
-    padding: 25px 30px 25px 30px;
+    margin: 30px 0 30px 0;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    padding: 20px;
     display:flex;
-    justify-content: space-between;
-    vertical-align: middle;
     color:#fff;
+    background-color: white;
 }
-.nft_pic{
-    width: 150px;
-    height: 150px;
-}
+
 .circle{
     display: flex;
     vertical-align: middle;
@@ -378,7 +408,7 @@ button{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 .login-btn {
     width: 300px;
@@ -411,6 +441,22 @@ button{
     border-radius: 50px;
     text-transform: uppercase;
     font-size: 40px;                       
+}
+.add-btn {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;   
 }
 .error {
     border: none;
