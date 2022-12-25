@@ -1,0 +1,485 @@
+body {
+    font-family: 'Ubuntu-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-size: 20px;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+@font-face {
+	font-family: Ubuntu-Regular; 
+	src: url(/fonts/Ubuntu-Regular.ttf); 
+    font-size: 20px;
+}
+@font-face {
+	font-family: Ubuntu-Bold; 
+	src: url(/fonts/Ubuntu-Bold.ttf); 
+    font-size: 40px;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+.header{
+    background: #FFFFFF;
+    user-select: none;
+    width: 100%;
+    position: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.icon {
+    font-size: 64px;
+    font-weight: 700;
+}
+label{
+    font-family: 'Ubuntu-Bold', sans-serif;
+}
+input::placeholder {
+    font-family: 'Ubuntu-Regular';
+}
+/* Контейнер для хедера */
+.container {
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    max-width: 1200px;
+    min-width:700px;
+    margin: 0 auto;
+}
+.intro_inner {
+    color: #FFFFFF;
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
+}
+.intro {
+    width: 100%;
+    position: flex;
+    height: 50vh;
+    background: url("../icons/inf-pic.png") center no-repeat;
+    background-size: cover;
+}
+.intro_title {
+    font-size: 150px;
+    font-weight: 700;
+    color:#FFFFFF;
+}
+.nav_link {
+    padding-top: 10px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0 20px;
+}
+.nav_link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: #008000;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.1s linear;
+    
+}
+.nav_link1{
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.loop{
+    width: 25px;
+    height: 24px;
+    background-color: black;
+    margin: 3px 0 3px 0;
+}
+.nav_link:hover {
+    color: #008000;
+
+}
+.nav_link:hover:after {
+    opacity: 1;
+}
+.header_inner{
+    background: #FFFFFF;
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button3 {
+    margin: 0 20px;
+    width: 40px;
+    height: 40px;
+}
+.button4 {
+    margin: 0 20px;
+    width: 51px;
+    height: 40px;
+}
+.footer {
+    margin-top: 50px;
+    font-family: 'Ubuntu-Bold', sans-serif;
+    display: flex;
+    text-align: center;
+    color: white;;
+    display: flex;
+    flex-direction: column;
+
+}
+.author {
+    color:#FFFFFF;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.block {
+    margin: 50px 0 50px 0;
+    padding: 20px 30px 0px 50px;
+    font-size: 48px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+.block_inf {
+    font-size: 16px;
+    padding: 10px 0px 50px 0px;
+    text-transform: capitalize;
+}
+form {
+    position: relative;
+    margin: 0 auto;
+}
+.login {
+    position: flex;
+    color: #FFFFFF;
+}
+.black_bt{
+    text-transform: uppercase;
+    border-radius: 50;
+    border-color: #FFFFFF;
+    border: 3px solid #fff; 
+}
+form{
+    color: white;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    cursor: pointer;
+    background-color: #000000;
+    color:#fff;
+}
+.message{
+    border: 2px solid #ff0004;
+    border-radius: 25px;
+    padding: 7px;
+    color: #ff0004;
+    text-align: center;
+    font-weight: bold;
+}
+.enter {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-family: 'Ubuntu-Regular';
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    height: 38px;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    padding-left: 25px;
+}
+.information {
+    margin: 30px 0 30px 0;
+    border: 1px solid #ffffff;
+    padding: 50px;
+    display:flex;
+    color:#fff;
+}
+.two_column{
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.login_box {
+    width: 600px;
+    margin: 30px 0 30px 0;
+    border: 1px solid #FFFFFF;
+    padding: 50px;
+    padding-bottom: 400px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display:flex;
+    color:#fff;
+}
+.rg_box{
+    min-width: 200px;
+    max-width: 300px;
+    margin: 100px 0px 0 100px;
+    padding-bottom: 0 0 82px 0;
+}
+.p {
+    color:#fff;
+    display: flex;
+    font-size: 40px;
+    padding-bottom:112px;
+}
+.title {
+    padding-top: 50px;
+    font-size: 64px;
+    font-weight: 700;
+    color:#FFFFFF;
+}
+.avatar {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}
+.nft_pic {
+    border: 0.25rem solid #000000;
+    border-radius: 20px;
+    width: 180px;
+    height: 180px;
+}
+.inf_block {
+    display: inline;
+}
+.logout {
+    padding-left: 50px;
+    padding-top: 20px;
+    display: flex;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    color: white;
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 20px;
+    width: 100%;
+}
+.product_buy {
+    padding-left: 50px;
+    padding-top: 20px;
+    display: flex;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    color: rgb(0, 0, 0);
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 20px;
+    width: 100%;
+}
+.logout:hover{
+    color:#008000;
+}
+.product_buy:hover{
+    color:#008000;
+}
+.username {
+    padding-left: 50px;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+.email {
+    padding-left: 50px;
+    padding-top: 40px;
+    font-family: 'Ubuntu-Regular';
+}
+.product_name{
+    padding-left: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: black;
+}
+.product_price {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-size: 30px;
+    color: rgb(2, 125, 6);
+}
+.purchased {
+    color: #fff;
+    margin: 30px 0 10px 0;
+    padding: 50px;
+    display: inline;
+}
+.status {
+    font-size: 32px;
+    padding-bottom: 30px;
+}
+.bought {
+    font-family: 'Ubuntu-Regular';
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.buttons {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;                       
+}
+.buttons:hover {
+    color: #008000;
+    border: 3px solid #008000;
+}
+.bt_admin {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.cart_inf{
+    margin: 30px 0 0 0;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: black;
+    padding: 5px 80px 5px 80px;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+}
+.catalog_item{
+    margin: 30px 0 30px 0;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    padding: 20px;
+    display:flex;
+    color:#fff;
+    background-color: white;
+}
+.item{
+    margin: 30px 0 30px 0;
+    border: 1px solid #ffffff;
+    padding: 25px 30px 25px 0;
+    vertical-align: middle;
+    display:flex;
+    color:#fff;
+}
+
+.circle{
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border:2px solid #FFFFFF;
+    border-radius: 100px;
+    margin: 60px 0 0 0;
+}
+.select{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+.sum_items{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+.delete {
+    margin: 60px 60px 0 0;
+}
+.str_name{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+}
+.login-btn {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;                       
+}
+.register-btn {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;                       
+}
+.add-btn {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;   
+}
+.error {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-family: 'Ubuntu-Regular';
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    height: 38px;
+    background: rgb(255, 244, 40);
+    color: #000000;
+    padding-left: 25px;
+}
+.none {
+    display: none;
+}
+/*text-transform: uppercase; - делает капс*/
