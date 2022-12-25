@@ -22,8 +22,6 @@
         include 'header.php';
         include 'account_inform.php';
 
-        //$login_ck = $_SESSION['user']['login'];
-        //$check_admin = mysqli_query($connect, "SELECT * FROM `users` WHERE `name` = '$login_ck' AND `admin` = ");
         if ($_SESSION['user']['admin'] === 'admin'){
             include 'account_admin.php'; 
         } else{

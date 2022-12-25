@@ -124,3 +124,19 @@ $('.add-btn').click(function (e) {
         }
     });
 });
+
+$('.buy-btn').click(function(e){
+    var id = $(this).attr('data-id');
+    console.log(id);
+    $.ajax({
+        type: "POST",
+        url: "../inc/buy.php",
+        dataType: "json",
+        data:{
+            id: id
+        },
+        success: function (data) {
+            document.location.href = '../account.php'
+        }
+    });
+});

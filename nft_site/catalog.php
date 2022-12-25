@@ -16,7 +16,7 @@
         ?>
         <div> 
             <div class = "container">
-                <h1 class = "title"> Catalog </h1>
+                <h1 class = "title" > Catalog </h1>
                 <link rel="stylesheet" href="css/style.css">
                 <?php
                     include 'inc/connectproducts.php';
@@ -29,17 +29,19 @@
                         $price = $row['price'];
                         $amount = $row['amount'];
                         echo'
-                        <div class = "item">
+                        <div class = "catalog_item">
                             <img src='.$picture.' width="100" alt="" class = "nft_pic">
                             <div>
                                 <p class = "product_name">'.$product_name.'</p>
                                 <p class = "product_price">'.$price.'$</p>
-                                <a href="#" class="product_buy">BUY</a>
+                                <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
                             </div>
                         </div>
                         ';
                     }
                 ?>
+                <script src="js/jquery-3.6.3.min.js"></script>
+                <script src="js/main.js"></script>
             </div>
         </div>
     </div>
