@@ -145,6 +145,75 @@ $('.buy-btn').click(function(e){
     });
 });
 
+$('.edit-btn').click(function (e) { 
+    $(`input`).removeClass('error').addClass('enter');
+
+    let edit_name = $('input[name="edit_name"]').val(),
+        nft_id = $('input[name="nft_id"]').val(),
+        edit_price = $('input[name="edit_price"]').val();
+
+    let formData = new FormData();
+    formData.append('edit_name', edit_name);
+    formData.append('edit_price', edit_price);
+    formData.append('nft_id', nft_id);
+
+    $.ajax({
+        type: "POST",
+        url: "../inc/editnft.php",
+        dataType: "json",
+        processData: false,
+        contentType: false,
+        cache: false,
+        data: formData,
+        success: function (data) {
+            if(data.status){
+                document.location.href = '../catalog.php'
+            }
+            else{
+                if (data.type === 1){
+                    data.fields.forEach(function (field) {
+                        $(`input.enter[name="${field}"]`).removeClass('enter').addClass('error');
+                    });
+                }
+                $('.message').removeClass('none').text(data.message);
+            }
+        }
+    });
+});
+
+$('.delete-btn').click(function (e) { 
+    $(`input`).removeClass('error').addClass('enter');
+
+    let delete_id = $('input[name="delete_id"]').val();
+        
+    let formData = new FormData();
+    formData.append('delete_id', delete_id);
+    
+    $.ajax({
+        type: "POST",
+        url: "../inc/deletenft.php",
+        dataType: "json",
+        processData: false,
+        contentType: false,
+        cache: false,
+        data: formData,
+        success: function (data) {
+            if(data.status){
+                document.location.href = '../catalog.php'
+            }
+            else{
+                if (data.type === 1){
+                    data.fields.forEach(function (field) {
+                        $(`input.enter[name="${field}"]`).removeClass('enter').addClass('error');
+                    });
+                }
+                $('.message').removeClass('none').text(data.message);
+            }
+        }
+    });
+});
+
+
 let cart = {};
 
 $('.cart-btn').click(function(e){
