@@ -14,6 +14,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="icons/icon.ico">
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> registration</title>
 </head>
 <body>

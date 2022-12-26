@@ -10,6 +10,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="icons/icon.ico">
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>account</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         ?>
         <div> 
             <div class = "container">
-                <h1 class = "title" > Catalog </h1>
+                <h1 class = "title"> Catalog </h1>
                 <link rel="stylesheet" href="css/style.css">
                 <?php
                     include 'inc/connectproducts.php';
@@ -33,13 +34,15 @@
                         $amount = $row['amount'];
                         echo'
                         <div class = "catalog_item">
-                            <img src='.$picture.' width="100" alt="" class = "nft_pic">
-                            <div>
-                                <p class = "product_name">'.$product_name.'</p>
-                                <p class = "product_price">'.$price.'$</p>
-                                <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
-                                <button type = "submit" class = "cart-btn" data-id='.$id.'>CART</button>
+                            <div class = "catalog_inform">
+                                <img src='.$picture.' width="100" alt="" class = "nft_pic">
+                                <div>
+                                    <p class = "product_name">'.$product_name.'</p>
+                                    <p class = "product_price">'.$price.'$</p>
+                                </div>
                             </div>
+                            <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
+                            <button type = "submit" class = "cart-btn" data-id='.$id.'>CART</button>
                         </div>
                         ';
                     }

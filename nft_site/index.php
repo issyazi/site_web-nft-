@@ -7,6 +7,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="icons/icon.ico">
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IDK</title>
 </head>
 <body>
@@ -15,11 +16,11 @@
         include 'header.php';
         ?>
     </div>
-    <div class = "intro"> 
+    <div class = "intro">
         <div class = "container">
             <div class = intro_inner>
                 <h1 class = "intro_title"> NFT </h1>
-                <p> (non-fungible tokens или невзаимозаменяемый токен) — технология, 
+                <p class = "intro_text"> (non-fungible tokens или невзаимозаменяемый токен) — технология, 
                     которая закрепляет право владения цифровым объектом за одним пользователеми 
                     подтверждает уникальность digital-собственности. Понятие пришло из мира 
                     криптовалют и работает на блокчейне: технологии, которая записывает данные 

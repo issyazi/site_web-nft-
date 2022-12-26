@@ -21,7 +21,9 @@
         <hr>
         <div class = "bt_admin">
             <a href="new_nft.php" class = "buttons"> new nft </a>
-            <a href="new_post.php" class = "buttons"> new post </a>
+            <a href="new_post.php" class = "buttons"> change nft </a>
+            <a href="new_post.php" class = "buttons"> delete nft </a>
+
         </div>
     </div>
 </div>

@@ -14,6 +14,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="icons/icon.ico">
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>account</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
 
         if ($_SESSION['user']['admin'] === 'admin'){
             include 'account_admin.php';
-        } 
+        }
         include 'footer.php';
         ?>
     </div>

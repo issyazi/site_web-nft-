@@ -7,6 +7,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="icons/icon.ico">
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> cart </title>
 </head>
 <body>
@@ -24,10 +25,15 @@
         </div>
         <div class = "item">
             <div class ="select">
-                <div class = "circle">  </div>
+                <div class = "circle">  </div> 
+                <!-- нужно при выборе изменить класс на сircle_on  -->
                 <img src="" class = "nft_pic">
+                <div class = "cart_nft">
+                    <p class = "cart_name">KLENIN</p>
+                    <p class = "cart_price"> 0.0001 рублей </p>
+                </div>
             </div>
-            <div class = "delete"> <p>delete</p></div>
+            <div> <img class = "delete" src="icons/delete.png"> </div>
         </div> 
     </div>
     <div>

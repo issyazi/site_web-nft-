@@ -4,7 +4,9 @@ body {
     padding: 0;
     background: black;
     font-size: 20px;
+    word-break: break-all;
 }
+
 *,
 *:before,
 *:after {
@@ -15,6 +17,7 @@ body {
 	src: url(/fonts/Ubuntu-Regular.ttf); 
     font-size: 20px;
 }
+
 @font-face {
 	font-family: Ubuntu-Bold; 
 	src: url(/fonts/Ubuntu-Bold.ttf); 
@@ -31,12 +34,25 @@ h1, h2, h3, h4, h5, h6, p{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+.header_fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 .icon {
     font-size: 64px;
-    font-weight: 700;
 }
+@media screen and (max-width:635px) {
+    .icon{
+        font-size: 40px;
+        padding: 0 5px 0 20px;
+    }
+}
+
 label{
     font-family: 'Ubuntu-Bold', sans-serif;
 }
@@ -49,29 +65,62 @@ input::placeholder {
     font-size: 20px;
     width: 100%;
     max-width: 1200px;
-    min-width:700px;
     margin: 0 auto;
 }
+@media (max-width:1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+@media (max-width:992px) {
+    .container{
+        max-width: 750px;
+    }
+}
+@media screen and (max-width:767px) {
+    .container{
+        max-width: none;
+        padding: 0 20px 0 20px;
+    }
+}
+
 .intro_inner {
     color: #FFFFFF;
     font-family: 'Ubuntu-Bold', sans-serif;
-    font-size: 20px;
     width: 100%;
     max-width: 1200px;
-    min-width: 800px;
     margin: 0 auto;
+    font-size: 20px;
 }
 .intro {
     width: 100%;
-    position: flex;
-    height: 50vh;
+    height: auto;
     background: url("../icons/inf-pic.png") center no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
+
 .intro_title {
     font-size: 150px;
-    font-weight: 700;
     color:#FFFFFF;
+}
+@media screen and (max-width:635px) {
+    .intro_title{
+        font-size: 64px;
+        margin: 10px 20px 10px 20px;
+    }
+}
+.intro_text{
+    padding-bottom: 15px;
+}
+@media screen and (max-width:635px) {
+    .intro_text{
+        margin: 10px 20px 10px 20px;
+        font-size: 12px;
+    }
+}
+.navi{
+    display: flex;
+    align-items: center;
 }
 .nav_link {
     padding-top: 10px;
@@ -79,13 +128,19 @@ input::placeholder {
     text-decoration: none;
     transition: color 0.1s linear;
     display: inline-block;
-    vertical-align: top;
     position: relative;
     margin: 0 20px;
 }
+@media screen and (max-width:635px) {
+    .nav_link{
+        padding-top: 2px;
+        font-size: 15px;
+        margin: 0 5px;
+    }
+}
 .nav_link::after{
     content: "";
-    display: block;
+    display: inline-block;
     width: 100%;
     height: 2px;
     border-radius: 20px;
@@ -118,11 +173,24 @@ input::placeholder {
     opacity: 1;
 }
 .header_inner{
-    background: #FFFFFF;
-    display: flex;
-    padding-top: 10px;
-    justify-content: space-between;
+    /* background: #FFFFFF; */
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+@media screen and (max-width:420px) {
+    .header_inner{
+        justify-content: center;
+    }
 }
 
 .button3 {
@@ -130,25 +198,43 @@ input::placeholder {
     width: 40px;
     height: 40px;
 }
+@media screen and (max-width:635px) {
+    .button3{
+        width: 20px;
+        height: 20px;
+        margin: 0 10px;
+    }
+}
 .button4 {
     margin: 0 20px;
     width: 51px;
     height: 40px;
+}
+@media screen and (max-width:635px) {
+    .button4{
+        width: 25px;
+        height: 20px;
+        margin: 0 10px;
+    }
 }
 .footer {
     margin-top: 50px;
     font-family: 'Ubuntu-Bold', sans-serif;
     display: flex;
     text-align: center;
-    color: white;;
-    display: flex;
-    flex-direction: column;
-
+    justify-content: center;
+    color: white;
 }
 .author {
     color:#FFFFFF;
     font-size: 16px;
     line-height: 1.5;
+}
+@media screen and (max-width:635px) {
+    .author{
+        font-size: 10px;
+        line-height: 1.3;
+    }
 }
 .block {
     margin: 50px 0 50px 0;
@@ -158,10 +244,23 @@ input::placeholder {
     border-radius: 50px;
     text-transform: uppercase;
 }
+@media screen and (max-width:635px) {
+    .block{
+        font-size: 24px;
+        margin: 20px 20px 20px 20px;
+        padding: 20px 30px 0px 50px;
+    }
+}
 .block_inf {
     font-size: 16px;
     padding: 10px 0px 50px 0px;
     text-transform: capitalize;
+}
+@media screen and (max-width:635px) {
+    .block_inf{
+        font-size: 14px;
+        padding: 10px 0px 30px 0px;
+    }
 }
 form {
     position: relative;
@@ -192,10 +291,10 @@ button{
     color:#fff;
 }
 .message{
-    border: 2px solid #ff0004;
+    border: 2px solid #008000;
     border-radius: 25px;
-    padding: 7px;
-    color: #ff0004;
+    padding: 7px 10px 5px 10px;
+    color: #008000;
     text-align: center;
     font-weight: bold;
 }
@@ -219,13 +318,14 @@ button{
     display:flex;
     color:#fff;
 }
+
 .two_column{
     display:flex;
     flex-wrap: wrap;
     align-content: center;
 }
 .login_box {
-    width: 600px;
+    min-width: 500px;
     margin: 30px 0 30px 0;
     border: 1px solid #FFFFFF;
     padding: 50px;
@@ -235,8 +335,12 @@ button{
     display:flex;
     color:#fff;
 }
+@media screen and (max-width:635px) {
+    .login_box{
+        min-width: none;
+    }
+}
 .rg_box{
-    min-width: 200px;
     max-width: 300px;
     margin: 100px 0px 0 100px;
     padding-bottom: 0 0 82px 0;
@@ -250,19 +354,37 @@ button{
 .title {
     padding-top: 50px;
     font-size: 64px;
-    font-weight: 700;
     color:#FFFFFF;
 }
+@media screen and (max-width:635px) {
+    .title{
+        font-size: 32px;
+        padding: 30px 0 0 20px;
+    }
+}
+
 .avatar {
     border-radius: 100px;
     width: 200px;
     height: 200px;
+}
+@media screen and (max-width:635px) {
+    .avatar{
+        width: 60px;
+        height: 60px;
+    }
 }
 .nft_pic {
     border: 0.25rem solid #000000;
     border-radius: 20px;
     width: 180px;
     height: 180px;
+}
+@media screen and (max-width:635px) {
+    .nft_pic{
+        width: 90px;
+        height: 90px;
+    }
 }
 .inf_block {
     display: inline;
@@ -300,10 +422,21 @@ button{
     font-size: 64px;
     text-transform: uppercase;
 }
+@media screen and (max-width:635px) {
+    .username{
+        font-size: 20px;
+    }
+}
 .email {
     padding-left: 50px;
     padding-top: 40px;
     font-family: 'Ubuntu-Regular';
+}
+@media screen and (max-width:635px) {
+    .email{
+        padding-top: 5px;
+        font-size: 15px;
+    }
 }
 .product_name{
     padding-left: 50px;
@@ -311,12 +444,51 @@ button{
     text-transform: uppercase;
     color: black;
 }
+@media screen and (max-width:635px) {
+    .product_name{
+        font-size: 30px;
+        padding-left: 30px;
+    }
+}
+
 .product_price {
     padding-left: 50px;
     padding-top: 50px;
     font-size: 30px;
-    color: rgb(2, 125, 6);
+    color: black;
 }
+@media screen and (max-width:635px) {
+    .product_price{
+        font-size: 20px;
+        padding-left: 30px;
+        padding-top: 10px;
+    }
+}
+.cart_name{
+    padding-left: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: white;
+}
+@media screen and (max-width:635px) {
+    .product_name{
+        font-size: 30px;
+    }
+}
+
+.cart_price {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-size: 30px;
+    color: white;
+}
+@media screen and (max-width:635px) {
+    .product_price{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+}
+
 .purchased {
     color: #fff;
     margin: 30px 0 10px 0;
@@ -327,11 +499,24 @@ button{
     font-size: 32px;
     padding-bottom: 30px;
 }
+@media screen and (max-width:635px) {
+    .status{
+        font-size:24px;
+        padding-bottom: 15px;
+    }
+}
 .bought {
     font-family: 'Ubuntu-Regular';
     display: flex;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+@media screen and (max-width:635px) {
+    .bought{
+        font-size:15px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
 }
 .buttons {
     width: 300px;
@@ -353,11 +538,35 @@ button{
     color: #008000;
     border: 3px solid #008000;
 }
+@media screen and (max-width:992px) {
+    .buttons{
+        margin-bottom: 10px;
+        width: 230px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:767px) {
+    .buttons{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
 .bt_admin {
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
+}
+@media screen and (max-width:635px) {
+    .bt_admin{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 .cart_inf{
     margin: 30px 0 0 0;
@@ -365,10 +574,21 @@ button{
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom: black;
-    padding: 5px 80px 5px 80px;
+    padding: 5px 60px 5px 60px;
     color:#fff;
     display: flex;
     justify-content: space-between;
+}
+@media screen and (max-width:635px) {
+    .cart_inf{
+        font-size: 15px;
+        padding: 5px 40px 5px 40px;
+    }
+}
+@media screen and (max-width:420px) {
+    .cart_inf{
+        flex-wrap: wrap;
+    }
 }
 .catalog_item{
     margin: 30px 0 30px 0;
@@ -376,41 +596,82 @@ button{
     border-radius: 25px;
     padding: 20px;
     display:flex;
+    align-items: center;
     color:#fff;
     background-color: white;
+    justify-content: space-between;
+    
 }
+@media screen and (max-width:635px) {
+    .catalog_item{
+        margin: 10px 20px 10px 20px;
+        flex-wrap: wrap;
+    }
+}
+.catalog_inform{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:635px) {
+    .catalog_inform{
+        flex-wrap: wrap;
+    }
+}
+
+
 .item{
-    margin: 30px 0 30px 0;
     border: 1px solid #ffffff;
-    padding: 25px 30px 25px 0;
+    padding: 25px 40px 25px 10px;
     vertical-align: middle;
+    align-items: center;
     display:flex;
+    justify-content: space-between;
     color:#fff;
 }
 
+
 .circle{
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    border:4px solid #FFFFFF;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+.circle_on{
     display: flex;
     vertical-align: middle;
     align-items: center;
     text-align: center;
     width: 25px;
     height: 25px;
-    border:2px solid #FFFFFF;
+    border:4px solid #FFFFFF;
     border-radius: 100px;
-    margin: 60px 0 0 0;
+    margin-right: 10px;
+    background-color: #008000;
 }
 .select{
+    margin-left: 10px;
     display: flex;
-    width: 200px;
     justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width:635px) {
+    .select{
+        min-width: 100px;
+    }
 }
 .sum_items{
     display: flex;
-    width: 500px;
     justify-content: space-between;
 }
 .delete {
-    margin: 60px 60px 0 0;
+    width: 25px;
+    height: 25px;
 }
 .str_name{
     display:flex;
@@ -432,40 +693,10 @@ button{
     border: 3px solid #FFFFFF;
     border-radius: 50px;
     text-transform: uppercase;
-    font-size: 40px;                       
+    font-size: 40px;    
+    margin:50px;                   
 }
-.buy-btn {
-    width: 300px;
-    height: 65px;
-    padding-top: 5px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: 'Ubuntu-Bold';
-    transition: color 0.1s linear;
-    border: 3px solid #FFFFFF;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-size: 40px;                       
-}
-.cart-btn {
-    width: 300px;
-    height: 65px;
-    padding-top: 5px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: 'Ubuntu-Bold';
-    transition: color 0.1s linear;
-    border: 3px solid #FFFFFF;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-size: 40px;                       
-}
+
 .register-btn {
     width: 300px;
     height: 65px;
@@ -510,6 +741,38 @@ button{
     background: rgb(255, 244, 40);
     color: #000000;
     padding-left: 25px;
+}
+.buy-btn {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;                       
+}
+.cart-btn {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;                       
 }
 .none {
     display: none;

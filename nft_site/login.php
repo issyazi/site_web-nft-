@@ -14,6 +14,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="icons/icon.ico">
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> login </title>
 </head>
 <body>
@@ -31,7 +32,7 @@
                     <input type="text" class = "enter" name="login" placeholder="enter login">
                     <label>password</label>
                     <input type="password" class = "enter" name="password" placeholder="enter password">
-                    <div style="padding: 50px;">
+                    <div>
                         <button type="submit" class = "login-btn">Enter</button>
                     </div>
                     <p class="message none"> test</p>
