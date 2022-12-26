@@ -105,24 +105,96 @@ input::placeholder {
     background: url("../icons/inf-pic.png") center no-repeat;
     background-size:cover;
 }
+.main_img{
+    width: 100%;
+    height: auto;
+}
 
 .intro_title {
-    font-size: 150px;
+    font-size: 120px;
     color:#FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@media screen and (max-width:1200px) {
+    .intro_title{
+        font-size: 100px;
+        margin: 10px 20px 10px 20px;
+    }
+}
+@media screen and (max-width:997px) {
+    .intro_title{
+        font-size: 86px;
+        margin: 10px 20px 10px 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 @media screen and (max-width:635px) {
     .intro_title{
-        font-size: 64px;
+        font-size: 48px;
         margin: 10px 20px 10px 20px;
+    }
+}
+@media screen and (max-width:420px) {
+    .intro_title{
+        font-size: 32px;
+        margin: 10px 20px 10px 20px;
+    }
+}
+.intro_title1 {
+    font-size: 100px;
+    color:#FFFFFF;
+}
+@media screen and (max-width:1200px) {
+    .intro_title1{
+        font-size: 80px;
+        margin: 10px 20px 10px 20px;
+    }
+}
+@media screen and (max-width:997px) {
+    .intro_title1{
+        font-size: 68px;
+        margin: 10px 20px 10px 20px;
+    }
+}
+@media screen and (max-width:635px) {
+    .intro_title1{
+        font-size: 32px;
+        margin: 10px 20px 10px 20px;
+    }
+}
+@media screen and (max-width:420px) {
+    .intro_title1{
+        font-size: 20px;
+        margin: 10px 20px 10px 20px;
+    }
+}
+.intro_title2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@media screen and (max-width:997px) {
+    .intro_title2{
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 .intro_text{
     padding-bottom: 15px;
+    text-indent: 30px;
+}
+@media screen and (max-width:767px) {
+    .intro_text{
+        text-indent: 20px;
+    }
 }
 @media screen and (max-width:635px) {
     .intro_text{
         margin: 10px 20px 10px 20px;
+        padding-bottom: 5px;
         font-size: 12px;
+        text-indent: 10px;
     }
 }
 .navi{
@@ -165,8 +237,7 @@ input::placeholder {
     top: 100%;
     left: 0;
     z-index: 1;
-    transition: opacity 0.1s linear;
-    
+    transition: opacity 0.1s linear; 
 }
 .nav_link1{
     text-decoration: none;
@@ -214,7 +285,12 @@ input::placeholder {
     border-radius: 100px;
     width: 40px;
     height: 40px;
+    transition: color 0.1s linear;
 }
+.button3:hover{
+    border: 3px solid #008000;
+}
+
 @media screen and (max-width:700px) {
     .button3{
         width: 28px;
@@ -830,12 +906,35 @@ button{
     border: 3px solid #FFFFFF;
     border-radius: 50px;
     text-transform: uppercase;
-    font-size: 40px;   
+    font-size: 40px;  
+    margin-top: 30px;   
+    margin-bottom: 30px;                     
 }
+.add-btn:hover {
+    color: #008000;
+    border: 3px solid #008000;
+}
+@media screen and (max-width:992px) {
+    .add-btn{
+        margin:20px;
+        width: 230px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:767px) {
+    .add-btn{
+        margin:20px;
+        width: 200px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
+
 .edit-btn {
-    width: 150px;
-    height: 27px;
-    padding-top: 0px;
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -846,13 +945,35 @@ button{
     border: 3px solid #FFFFFF;
     border-radius: 50px;
     text-transform: uppercase;
-    font-size: 20px;    
-    margin:15px;                   
+    font-size: 40px;   
+    margin-top: 30px;   
+    margin-bottom: 30px;                    
 }
+.edit-btn:hover {
+    color: #008000;
+    border: 3px solid #008000;
+}
+@media screen and (max-width:992px) {
+    .edit-btn{
+        margin:20px;
+        width: 230px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:767px) {
+    .edit-btn{
+        margin:20px;
+        width: 200px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
+
 .delete-btn {
-    width: 150px;
-    height: 27px;
-    padding-top: 0px;
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -863,8 +984,29 @@ button{
     border: 3px solid #FFFFFF;
     border-radius: 50px;
     text-transform: uppercase;
-    font-size: 20px;    
-    margin:15px;                   
+    font-size: 40px;   
+    margin-top: 30px;   
+    margin-bottom: 30px;                   
+}
+.delete-btn:hover {
+    color: #008000;
+    border: 3px solid #008000;
+}
+@media screen and (max-width:992px) {
+    .delete-btn{
+        margin:20px;
+        width: 230px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:767px) {
+    .delete-btn{
+        margin:20px;
+        width: 200px;
+        height: 40px;
+        font-size: 24px;
+    }
 }
 .error {
     border: none;
@@ -882,16 +1024,21 @@ button{
 .buy-btn {
     padding: 5px 70px 5px 70px;
     color: white;
+    background-color: #000000;
     text-decoration: none;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
     font-family: 'Ubuntu-Bold';
     transition: color 0.1s linear;
+
     border: 3px solid #FFFFFF;
     border-radius: 50px;
     text-transform: uppercase;
     font-size: 40px;   
+}
+.buy-btn:hover{
+    background: #008000;
 }
 
 @media screen and (max-width:635px) {
@@ -915,7 +1062,9 @@ button{
     text-transform: uppercase;
     font-size: 40px;                       
 }
-
+.cart-btn:hover{
+    background: #008000;
+}
 @media screen and (max-width:635px) {
     .cart-btn{
         padding: 5px 50px 5px 50px;

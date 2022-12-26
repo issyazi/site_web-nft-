@@ -17,7 +17,6 @@
                     }
 
                     ?>
-                    <a href = "cart.php" class = "nav_link1"> <img type= "image" href = "#" class ="button4" src="icons/cart.png"> </a>
                 </nav>
             </div>
         </div>

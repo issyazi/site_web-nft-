@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="icons/icon.ico">
     <link rel="icon" href="icons/icon.ico" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>account</title>
+    <title>delete nft</title>
 </head>
 <body>
     <div>
