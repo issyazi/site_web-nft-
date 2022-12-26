@@ -32,11 +32,11 @@
                     <input type="text" class = "enter" name="login" placeholder="enter login">
                     <label>password</label>
                     <input type="password" class = "enter" name="password" placeholder="enter password">
-                    <div>
-                        <button type="submit" class = "login-btn">Enter</button>
-                    </div>
-                    <p class="message none"> test</p>
                 </form>
+                <div>
+                    <button type="submit" class = "login-btn">Enter</button>
+                </div>
+                <p class="message none"> test</p>
                 
                 <script src="js/jquery-3.6.3.min.js"></script>
                 <script src="js/main.js"></script>
