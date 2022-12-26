@@ -5,7 +5,7 @@
         <input type="text" class = "enter" name="delete_id" placeholder="enter the id of nft that you want to delete">
         <button type="submit" class = "delete-btn">DELETE</button>
         <p>
-        <a href="account.php">Back</a>
+        <a href="account.php" class = "back">Back</a>
         </p>
         <p class="message none"> test</p>
     </form>

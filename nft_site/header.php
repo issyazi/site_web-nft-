@@ -13,7 +13,7 @@
                         $ava = $_SESSION['user']['avatar'];
                         echo '<a href = "login.php" class = "nav_link1"> <img type= "image" class ="button3" src="'.$ava.'"> </a>';
                     } else {
-                        echo '<a href = "login.php" class = "nav_link1"> <img type= "image" class ="button3" src="icons/icon.ico"> </a>';
+                        echo '<a href = "login.php" class = "nav_link1"> <img type= "image" class ="button3" src="icons/face.png"> </a>';
                     }
 
                     ?>

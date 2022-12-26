@@ -34,7 +34,7 @@
             <input type="text" class = "enter" name="price" placeholder="enter price">
             <button type="submit" class = "add-btn">Add</button>
             <p>
-            <a href="account.php">Back</a>
+            <a href="account.php" class = "back">Back</a>
             </p>
             <p class="message none"> test</p>
         </form>

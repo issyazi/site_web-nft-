@@ -42,9 +42,7 @@
                                         <p class = "product_price">'.$price.'$</p>
                                     </div>
                                 </div>
-                                <div class = "btn_cart_buy">
-                                    <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
-                                </div>
+                                <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
                             </div>
                             ';
                         }

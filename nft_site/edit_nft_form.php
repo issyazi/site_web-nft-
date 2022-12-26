@@ -9,7 +9,7 @@
         <input type="text" class = "enter" name="edit_price" placeholder="enter a new зкшсу or don't enter anything">
         <button type="submit" class = "edit-btn">EDIT</button>
         <p>
-        <a href="account.php">Back</a>
+        <a href="account.php" class = "back">Back</a>
         </p>
         <p class="message none"> test</p>
     </form>

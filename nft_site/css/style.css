@@ -280,15 +280,17 @@ input::placeholder {
 }
 
 .button3 {
+    box-sizing: border-box;
     margin: 0 20px;
-    border: 3px solid black;
+    padding: 1px;
+    border: 4px solid black;
     border-radius: 100px;
     width: 40px;
     height: 40px;
     transition: color 0.1s linear;
 }
 .button3:hover{
-    border: 3px solid #008000;
+    border: 4px solid #008000;
 }
 
 @media screen and (max-width:700px) {
@@ -499,6 +501,7 @@ button{
 .nft_pic {
     border: 0.25rem solid #000000;
     border-radius: 20px;
+    padding: 1px;
     width: 180px;
     height: 180px;
 }
@@ -521,6 +524,14 @@ button{
     font-family: 'Ubuntu-Bold', sans-serif;
     font-size: 20px;
     width: 100%;
+}
+.back{
+    text-decoration: none;
+    transition: color 0.1s linear;
+    color: white;
+}
+.back:hover{
+    color:#008000;
 }
 .product_buy {
     padding-left: 50px;
@@ -630,6 +641,7 @@ button{
 .bought {
     font-family: 'Ubuntu-Regular';
     display: flex;
+    align-items: center;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -719,6 +731,9 @@ button{
     padding: 20px;
     color:#fff;
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 @media screen and (max-width:635px) {
     .catalog_item{
@@ -818,6 +833,10 @@ button{
     font-size: 40px;    
     margin:50px;                   
 }
+.login-btn:hover {
+    color: #008000;
+    border: 3px solid #008000;
+}
 
 @media screen and (max-width:767px) {
     .login-btn{
@@ -848,7 +867,10 @@ button{
     font-size: 40px;    
     margin:50px;                   
 }
-
+.create-btn:hover {
+    color: #008000;
+    border: 3px solid #008000;
+}
 @media screen and (max-width:767px) {
     .create-btn{
         padding-left: 40px;
@@ -873,6 +895,10 @@ button{
     border-radius: 50px;
     text-transform: uppercase;
     font-size: 40px;                
+}
+.register-btn:hover {
+    color: #008000;
+    border: 3px solid #008000;
 }
 @media screen and (max-width:992px) {
     .register-btn{
@@ -1022,20 +1048,17 @@ button{
     padding-left: 25px;
 }
 .buy-btn {
-    padding: 5px 70px 5px 70px;
+    width: 200px;
+    height: 70px;
     color: white;
-    background-color: #000000;
     text-decoration: none;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
     font-family: 'Ubuntu-Bold';
     transition: color 0.1s linear;
-
     border: 3px solid #FFFFFF;
     border-radius: 50px;
     text-transform: uppercase;
     font-size: 40px;   
+    align-items: center;
 }
 .buy-btn:hover{
     background: #008000;
@@ -1043,50 +1066,13 @@ button{
 
 @media screen and (max-width:635px) {
     .buy-btn{
-        padding: 5px 50px 5px 50px;
-        margin: 10px 10px 0 10px;
+        width: 100px;
+        height: 50px;
         font-size: 24px;
     }
 }
-.cart-btn {
-    padding: 5px 70px 5px 70px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: 'Ubuntu-Bold';
-    transition: color 0.1s linear;
-    border: 3px solid #FFFFFF;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-size: 40px;                       
-}
-.cart-btn:hover{
-    background: #008000;
-}
-@media screen and (max-width:635px) {
-    .cart-btn{
-        padding: 5px 50px 5px 50px;
-        margin: 10px 10px 0 10px;
-        font-size: 24px;
-    }
-}
-.btn_cart_buy {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-@media screen and (max-width:635px) {
-    .btn_cart_buy{
-        flex-wrap: wrap;
-    }
-}
-@media screen and (max-width:487px) {
-    .btn_cart_buy{
-        justify-content: center;
-    }
-}
+
+
 
 .none {
     display: none;
