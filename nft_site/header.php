@@ -7,7 +7,16 @@
                     <a href = "index.php" class = "nav_link"> main </a>
                     <a href = "catalog.php" class = "nav_link"> catalog </a>
                     <a href = "login.php" class = "nav_link"> account </a>
-                    <a href = "login.php" class = "nav_link1"> <img type= "image" class ="button3" src="icons/face.png"> </a>
+                    <?php
+                    session_start();
+                    if ($_SESSION['user']){
+                        $ava = $_SESSION['user']['avatar'];
+                        echo '<a href = "login.php" class = "nav_link1"> <img type= "image" class ="button3" src="'.$ava.'"> </a>';
+                    } else {
+                        echo '<a href = "login.php" class = "nav_link1"> <img type= "image" class ="button3" src="icons/icon.ico"> </a>';
+                    }
+
+                    ?>
                     <a href = "cart.php" class = "nav_link1"> <img type= "image" href = "#" class ="button4" src="icons/cart.png"> </a>
                 </nav>
             </div>

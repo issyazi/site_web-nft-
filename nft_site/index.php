@@ -13,7 +13,7 @@
 <body>
     <div>
         <?php
-        include 'header.php';
+        require 'header.php';
         ?>
     </div>
     <div class = "intro">
