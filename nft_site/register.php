@@ -37,7 +37,7 @@
             <label>Repeat password*</label>
             <input type="password" class = "enter" name="password_repeat" placeholder="Введите пароль еще раз">
             <button type="submit" class = "register-btn">Ready</button>
-            <p>
+            <p style="margin-top: 20px;">
             Have account yet? - <a href="login.php">Enter</a>
             </p>
             <p class="message none"> test</p>

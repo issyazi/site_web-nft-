@@ -42,8 +42,10 @@
                                         <p class = "product_price">'.$price.'$</p>
                                     </div>
                                 </div>
-                                <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
-                                <button type = "submit" class = "cart-btn" data-id='.$id.'>CART</button>
+                                <div class = "btn_cart_buy">
+                                    <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
+                                    <button type = "submit" class = "cart-btn" data-id='.$id.'>CART</button>
+                                </div>
                             </div>
                             ';
                         }
@@ -57,4 +59,4 @@
         </div>
     </div>
 </body>
-</html>
+</html>           

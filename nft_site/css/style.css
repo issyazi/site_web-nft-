@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6, p{
     z-index: 100;
     -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+            word-break:keep-all;
 }
 .header_fixed {
   position: fixed;
@@ -46,7 +47,7 @@ h1, h2, h3, h4, h5, h6, p{
 .icon {
     font-size: 64px;
 }
-@media screen and (max-width:635px) {
+@media screen and (max-width:520px) {
     .icon{
         font-size: 40px;
         padding: 0 5px 0 20px;
@@ -56,6 +57,12 @@ h1, h2, h3, h4, h5, h6, p{
 label{
     font-family: 'Ubuntu-Bold', sans-serif;
 }
+@media screen and (max-width:635px) {
+    label{
+        font-size: 15px;
+    }
+}
+
 input::placeholder {
     font-family: 'Ubuntu-Regular';
 }
@@ -121,6 +128,7 @@ input::placeholder {
 .navi{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .nav_link {
     padding-top: 10px;
@@ -131,11 +139,18 @@ input::placeholder {
     position: relative;
     margin: 0 20px;
 }
-@media screen and (max-width:635px) {
+@media screen and (max-width:700px) {
+    .nav_link{
+        padding-top: 2px;
+        font-size: 19px;
+        margin: 0 5px;
+    }
+}
+@media screen and (max-width:520px) {
     .nav_link{
         padding-top: 2px;
         font-size: 15px;
-        margin: 0 5px;
+        margin: 0 10px;
     }
 }
 .nav_link::after{
@@ -187,7 +202,7 @@ input::placeholder {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-@media screen and (max-width:420px) {
+@media screen and (max-width:520px) {
     .header_inner{
         justify-content: center;
     }
@@ -198,7 +213,14 @@ input::placeholder {
     width: 40px;
     height: 40px;
 }
-@media screen and (max-width:635px) {
+@media screen and (max-width:700px) {
+    .button3{
+        width: 28px;
+        height: 28px;
+        margin: 0 15px;
+    }
+}
+@media screen and (max-width:520px) {
     .button3{
         width: 20px;
         height: 20px;
@@ -210,7 +232,14 @@ input::placeholder {
     width: 51px;
     height: 40px;
 }
-@media screen and (max-width:635px) {
+@media screen and (max-width:700px) {
+    .button4{
+        width: 35px;
+        height: 28px;
+        margin: 0 15px;
+    }
+}
+@media screen and (max-width:520px) {
     .button4{
         width: 25px;
         height: 20px;
@@ -321,35 +350,50 @@ button{
 
 .two_column{
     display:flex;
-    flex-wrap: wrap;
     align-content: center;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:635px) {
+    .two_column{
+        vertical-align: middle;
+    }
 }
 .login_box {
     min-width: 500px;
     margin: 30px 0 30px 0;
     border: 1px solid #FFFFFF;
     padding: 50px;
-    padding-bottom: 400px;
+    padding-bottom: 300px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    display:flex;
     color:#fff;
 }
-@media screen and (max-width:635px) {
+@media screen and (max-width:991px) {
     .login_box{
-        min-width: none;
+        min-width: 300px;
+        margin: 30px 30px 0px 30px;
+        padding-bottom: 100px;
     }
 }
 .rg_box{
-    max-width: 300px;
+    min-width: 300px;
     margin: 100px 0px 0 100px;
-    padding-bottom: 0 0 82px 0;
 }
+
+
 .p {
     color:#fff;
     display: flex;
+    width: 300px;
     font-size: 40px;
     padding-bottom:112px;
+}
+@media screen and (max-width:635px) {
+    .p{
+        vertical-align: middle;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
 }
 .title {
     padding-top: 50px;
@@ -440,6 +484,7 @@ button{
 }
 .product_name{
     padding-left: 50px;
+    justify-content: left;
     font-size: 50px;
     text-transform: uppercase;
     color: black;
@@ -450,11 +495,11 @@ button{
         padding-left: 30px;
     }
 }
-
 .product_price {
     padding-left: 50px;
     padding-top: 50px;
     font-size: 30px;
+    justify-content: left;
     color: black;
 }
 @media screen and (max-width:635px) {
@@ -465,17 +510,17 @@ button{
     }
 }
 .cart_name{
+    padding-top: 5px;
     padding-left: 50px;
     font-size: 50px;
     text-transform: uppercase;
     color: white;
 }
 @media screen and (max-width:635px) {
-    .product_name{
+    .cart_name{
         font-size: 30px;
     }
 }
-
 .cart_price {
     padding-left: 50px;
     padding-top: 50px;
@@ -483,12 +528,11 @@ button{
     color: white;
 }
 @media screen and (max-width:635px) {
-    .product_price{
+    .cart_price{
         font-size: 20px;
         padding-top: 10px;
     }
 }
-
 .purchased {
     color: #fff;
     margin: 30px 0 10px 0;
@@ -502,7 +546,7 @@ button{
 @media screen and (max-width:635px) {
     .status{
         font-size:24px;
-        padding-bottom: 15px;
+        padding-bottom: 15px
     }
 }
 .bought {
@@ -595,12 +639,8 @@ button{
     border: 1px solid #ffffff;
     border-radius: 25px;
     padding: 20px;
-    display:flex;
-    align-items: center;
     color:#fff;
     background-color: white;
-    justify-content: space-between;
-    
 }
 @media screen and (max-width:635px) {
     .catalog_item{
@@ -610,7 +650,7 @@ button{
 }
 .catalog_inform{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
 }
 @media screen and (max-width:635px) {
     .catalog_inform{
@@ -657,8 +697,9 @@ button{
 .select{
     margin-left: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
+    flex-wrap: wrap;
 }
 @media screen and (max-width:635px) {
     .select{
@@ -666,8 +707,12 @@ button{
     }
 }
 .sum_items{
+    padding: 2px 5px 2px 5px;
     display: flex;
     justify-content: space-between;
+}
+.cart_bar{
+    padding: 2px 5px 2px 5px;
 }
 .delete {
     width: 25px;
@@ -687,7 +732,6 @@ button{
     text-decoration: none;
     text-align: center;
     display: table-cell;
-    vertical-align: middle;
     font-family: 'Ubuntu-Bold';
     transition: color 0.1s linear;
     border: 3px solid #FFFFFF;
@@ -697,6 +741,45 @@ button{
     margin:50px;                   
 }
 
+@media screen and (max-width:767px) {
+    .login-btn{
+        text-align: center;
+        margin-left: 30px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 200px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+.create-btn {
+    width: 300px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: table-cell;
+    font-family: 'Ubuntu-Bold';
+    transition: color 0.1s linear;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 40px;    
+    margin:50px;                   
+}
+
+@media screen and (max-width:767px) {
+    .create-btn{
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 200px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
 .register-btn {
     width: 300px;
     height: 65px;
@@ -711,7 +794,25 @@ button{
     border: 3px solid #FFFFFF;
     border-radius: 50px;
     text-transform: uppercase;
-    font-size: 40px;                       
+    font-size: 40px;                
+}
+@media screen and (max-width:992px) {
+    .register-btn{
+        margin-bottom: 10px;
+        width: 230px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:635px) {
+    .register-btn{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+        height: 40px;
+        font-size: 24px;
+    }
 }
 .add-btn {
     width: 300px;
@@ -777,9 +878,7 @@ button{
     padding-left: 25px;
 }
 .buy-btn {
-    width: 300px;
-    height: 65px;
-    padding-top: 5px;
+    padding: 5px 70px 5px 70px;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -790,12 +889,18 @@ button{
     border: 3px solid #FFFFFF;
     border-radius: 50px;
     text-transform: uppercase;
-    font-size: 40px;                       
+    font-size: 40px;   
+}
+
+@media screen and (max-width:635px) {
+    .buy-btn{
+        padding: 5px 50px 5px 50px;
+        margin: 10px 10px 0 10px;
+        font-size: 24px;
+    }
 }
 .cart-btn {
-    width: 300px;
-    height: 65px;
-    padding-top: 5px;
+    padding: 5px 70px 5px 70px;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -808,6 +913,30 @@ button{
     text-transform: uppercase;
     font-size: 40px;                       
 }
+
+@media screen and (max-width:635px) {
+    .cart-btn{
+        padding: 5px 50px 5px 50px;
+        margin: 10px 10px 0 10px;
+        font-size: 24px;
+    }
+}
+.btn_cart_buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media screen and (max-width:635px) {
+    .btn_cart_buy{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:487px) {
+    .btn_cart_buy{
+        justify-content: center;
+    }
+}
+
 .none {
     display: none;
 }

@@ -19,9 +19,9 @@
     <div class = "container">
         <div class = "cart_inf">
             <p class ="sum_items">Items: 1</p>
-            <p>Select: 0</p>
-            <p>Select all</p>
-            <p>Delete all</p>
+            <p class = "cart_bar">Select: 0</p>
+            <p class = "cart_bar">Select all</p>
+            <p class = "cart_bar">Delete all</p>
         </div>
         <div class = "item">
             <div class ="select">
@@ -29,7 +29,7 @@
                 <!-- нужно при выборе изменить класс на сircle_on  -->
                 <img src="" class = "nft_pic">
                 <div class = "cart_nft">
-                    <p class = "cart_name">KLENIN</p>
+                    <p class = "cart_name">KLEeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeNIN</p>
                     <p class = "cart_price"> 0.0001 рублей </p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <div> 
     <div class = "container">
         <div class = "purchased">
-            <p class = "status"> Statistic </p>
+        <p class = "status"> Statistic </p>
             <?php
                 include 'inc/connectproducts.php';
                 $all_users = mysqli_num_rows(mysqli_query($connectproducts, "SELECT * FROM `users`"));
@@ -14,7 +14,7 @@
                 </div>
                 <div class = "bought">
                 <p>purchased</p>
-                    <p>:</p>
+                <p>:</p>
                     <p>'.$all_buys.'</p>
                 </div>
                 ';
