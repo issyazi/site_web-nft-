@@ -28,8 +28,6 @@
         <form>
             <label style="margin-top: 30px;">Name</label>
             <input type="text" class = "enter" name="nft_name" placeholder="enter name">
-            <label>Collection</label>
-            <input type="text" class = "enter" name="collection" placeholder="enter collection">
             <label>Picture</label>
             <input type="file" class = "enter" name="picture">
             <label>Price</label>

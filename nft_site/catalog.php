@@ -44,7 +44,6 @@
                                 </div>
                                 <div class = "btn_cart_buy">
                                     <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
-                                    <button type = "submit" class = "cart-btn" data-id='.$id.'>CART</button>
                                 </div>
                             </div>
                             ';

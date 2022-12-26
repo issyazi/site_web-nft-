@@ -27,12 +27,12 @@
 
         die;
     }
+    $query = mysqli_query($connect, "SELECT `password` FROM `users` WHERE `login` = '$login' OR `email` = '$login'");
+    $hash = mysqli_fetch_assoc($query);
+    $hash = $hash['password'];
 
-    $password = md5($password);
-
-    $check_user = mysqli_query($connect, "SELECT * FROM `users` WHERE (`login` = '$login' OR `email` = '$login')  AND `password` = '$password'");
-    if(mysqli_num_rows($check_user) > 0){
-
+    if(password_verify($password, $hash)){
+        $check_user = mysqli_query($connect, "SELECT * FROM `users` WHERE `login` = '$login' OR `email` = '$login'");
         $user = mysqli_fetch_assoc($check_user);
 
         $_SESSION['user'] = [

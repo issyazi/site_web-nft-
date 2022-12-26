@@ -15,8 +15,9 @@
                 $amount = $row['amount'];
                 echo'
                 <div class = "bought">
+                    <img src='.$picture.' width="100" alt="" class = "nft_pic">
                     <p>'.$product_name.'</p>
-                    <p>:</p>
+                    <p>: </p>
                     <p>'.$price.'$</p>
                 </div>
                 ';

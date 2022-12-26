@@ -81,7 +81,7 @@
             die;
 
         }
-        $password = md5($password);
+        $password = password_hash($password, PASSWORD_DEFAULT);
 
         mysqli_query($connect, "INSERT INTO `users` (`id`, `login`, `email`, `password`, `avatar`) VALUES (NULL, '$login', '$email', '$password', '$path')");
 

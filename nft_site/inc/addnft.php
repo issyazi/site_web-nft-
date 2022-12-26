@@ -24,9 +24,6 @@
     if ($nft_name === ''){
         $error_fields[] = 'nft_name';
     }
-    if ($collection === ''){
-        $error_fields[] = 'collection';
-    }
     if ($price === ''){
         $error_fields[] = 'price';
     }
@@ -64,7 +61,7 @@
 
     }
 
-    mysqli_query($connectproducts, "INSERT INTO `products` (`id`, `name`, `collection`, `price`, `picture`, `amount`) VALUES (NULL, '$nft_name', '$collection', '$price', '$pathpicture', '1')");
+    mysqli_query($connectproducts, "INSERT INTO `products` (`id`, `name`, `price`, `picture`, `amount`) VALUES (NULL, '$nft_name', '$price', '$pathpicture', '1')");
 
     $response = [
         "status" => true,

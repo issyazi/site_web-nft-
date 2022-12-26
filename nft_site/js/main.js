@@ -27,7 +27,7 @@ $('.login-btn').click(function (e) {
                 }
                 $('.message').removeClass('none').text(data.message);
             }
-        }
+        },
     });
 });
 
@@ -91,12 +91,10 @@ $('.add-btn').click(function (e) {
     $(`input`).removeClass('error').addClass('enter');
 
     let nft_name = $('input[name="nft_name"]').val(),
-        collection = $('input[name="collection"]').val(),
         price = $('input[name="price"]').val();
 
     let formData = new FormData();
     formData.append('nft_name', nft_name);
-    formData.append('collection', collection);
     formData.append('price', price);
     formData.append('picture', picture);
 
@@ -213,27 +211,3 @@ $('.delete-btn').click(function (e) {
     });
 });
 
-
-let cart = {};
-
-$('.cart-btn').click(function(e){
-    e.preventDefault();
-    let id = $(this).attr('data-id');
-    $.ajax({
-        type: 'GET',
-        url: "../inc/cart.php",
-        dataType: 'json',
-        data:{
-            cart: 'add',
-            id: id
-        },
-        success: function (res) {
-            console.log(res)
-            alert('Товар добавлен в корзину');
-        },
-        error: function (){
-            alert('SUKA');
-            //document.location.href = '../login.php'
-        }
-    });
-});
