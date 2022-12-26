@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +23,7 @@
                 <link rel="stylesheet" href="css/style.css">
                 <?php
                     include 'inc/connectproducts.php';
-                    $all_products = mysqli_query($connectproducts, "SELECT * FROM `products`");
+                    $all_products = mysqli_query($connectproducts, "SELECT * FROM `products` WHERE `amount` = 1");
                     while($row = mysqli_fetch_assoc($all_products)){
                         $id = $row['id'];
                         $product_name = $row['name'];
@@ -35,6 +38,7 @@
                                 <p class = "product_name">'.$product_name.'</p>
                                 <p class = "product_price">'.$price.'$</p>
                                 <button type = "submit" class = "buy-btn" data-id='.$id.'>BUY</button>
+                                <button type = "submit" class = "cart-btn" data-id='.$id.'>CART</button>
                             </div>
                         </div>
                         ';

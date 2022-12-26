@@ -126,17 +126,45 @@ $('.add-btn').click(function (e) {
 });
 
 $('.buy-btn').click(function(e){
-    var id = $(this).attr('data-id');
+    e.preventDefault();
+    let id = $(this).attr('data-id');
     console.log(id);
     $.ajax({
-        type: "POST",
+        type: 'GET',
         url: "../inc/buy.php",
-        dataType: "json",
+        dataType: 'json',
         data:{
             id: id
         },
-        success: function (data) {
+        success: function (res) {
             document.location.href = '../account.php'
+        },
+        error: function (){
+            document.location.href = '../login.php'
+        }
+    });
+});
+
+let cart = {};
+
+$('.cart-btn').click(function(e){
+    e.preventDefault();
+    let id = $(this).attr('data-id');
+    $.ajax({
+        type: 'GET',
+        url: "../inc/cart.php",
+        dataType: 'json',
+        data:{
+            cart: 'add',
+            id: id
+        },
+        success: function (res) {
+            console.log(res)
+            alert('Товар добавлен в корзину');
+        },
+        error: function (){
+            alert('SUKA');
+            //document.location.href = '../login.php'
         }
     });
 });

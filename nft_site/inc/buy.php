@@ -1,15 +1,12 @@
 <?php
     session_start();
-    if (!$_SESSION['user']){
-        header('Location: ../login.php');
-    }
+    require_once 'connectproducts.php';
 
-    $action = $_POST["action"];
-    if ($action == 'add'){
-        $id = $_POST['id'];
-        $user_id = $_SESSION['user']['id'];
-        mysqli_query($connect, "UPDATE `products` SET `owner` = '$user_id' WHERE `id` = '$id'");
-        mysqli_query($connect, "UPDATE `products` SET `owner` = 0 WHERE `id` = '$id'");
-    }
-
+    if(isset($_GET['id'])){
+        $id = (int)$_GET['id'];
+        $user_id = (int)$_SESSION['user']['id'];
+        echo json_encode(['code' => 'ok', 'answer' => $id, 'user' => $user_id]);
+        mysqli_query($connectproducts, "UPDATE `products` SET `owner` = '$user_id', `amount` = 0 WHERE id = '$id'");
+    };
+    
     

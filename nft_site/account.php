@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!$_SESSION['user']){
-        header('Location: account.php');
+        header('Location: login.php');
     }
 ?>
 
@@ -21,12 +21,11 @@
         <?php
         include 'header.php';
         include 'account_inform.php';
+        include 'account_user.php';
 
         if ($_SESSION['user']['admin'] === 'admin'){
-            include 'account_admin.php'; 
-        } else{
-            include 'account_user.php';
-        }
+            include 'account_admin.php';
+        } 
         include 'footer.php';
         ?>
     </div>
