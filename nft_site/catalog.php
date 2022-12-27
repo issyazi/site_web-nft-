@@ -36,7 +36,7 @@
                             echo'
                             <div class = "catalog_item">
                                 <div class = "catalog_inform">
-                                    <img src='.$picture.' width="100" alt="" class = "nft_pic">
+                                    <img src='.$picture.' data-enlargeable width="100" alt="" class = "nft_pic">
                                     <div>
                                         <p class = "product_name">'.$product_name.'</p>
                                         <p class = "product_price">'.$price.'$</p>
@@ -51,6 +51,7 @@
                     }
                 ?>
                 <script src="js/jquery-3.6.3.min.js"></script>
+                <script src="js/image.js"></script>
                 <script src="js/main.js"></script>
             </div>
         </div>

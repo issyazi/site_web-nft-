@@ -500,6 +500,7 @@ button{
 }
 .nft_pic {
     border: 0.25rem solid #000000;
+    cursor: zoom-in;
     border-radius: 20px;
     padding: 1px;
     width: 180px;

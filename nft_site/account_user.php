@@ -15,7 +15,7 @@
                 $amount = $row['amount'];
                 echo'
                 <div class = "bought">
-                    <img src='.$picture.' width="100" alt="" class = "nft_pic">
+                    <img src='.$picture.' data-enlargeable width="100" width="100" alt="" class = "nft_pic">
                     <p style="margin-left:15px;">'.$product_name.'</p>
                     <p>: </p>
                     <p>'.$price.'$</p>
@@ -26,4 +26,5 @@
         </div>
         <hr>
     </div>
+    <script src="js/image.js"></script>
 </div>
